@@ -95,7 +95,7 @@ function ServiceFormPage() {
           <input
             type="number"
             name="price"
-            placeholder="Price ($)"
+            placeholder="Price (₹)"
             value={formData.price}
             onChange={handleChange}
             required

@@ -45,8 +45,9 @@ function Sidebar() {
     ],
     client: [
       { path: "/dashboard", name: "Dashboard", icon: <FaTachometerAlt /> },
-      { path: "/plans", name: "My Orders", icon: <FaClipboardList /> },
+      { path: "/plans", name: "My Plans", icon: <FaClipboardList /> },
       { path: "/subscriptions", name: "Subscriptions", icon: <FaBoxOpen /> },
+      { path: "/orders", name: "My Orders", icon: <FaClipboardList /> },
     ],
     staff: [
       {

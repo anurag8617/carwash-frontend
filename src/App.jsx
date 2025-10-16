@@ -26,6 +26,11 @@ import PlanFormPage from "./pages/vendor/PlanFormPage";
 import PlanBrowsePage from "./pages/client/PlanBrowsePage";
 import MySubscriptionsPage from "./pages/client/MySubscriptionsPage";
 
+import MyOrdersPage from "./pages/client/MyOrdersPage";
+import PaymentPage from "./pages/client/PaymentPage";
+
+import AdminVendorListPage from "./pages/admin/AdminVendorListPage";
+
 // A component to protect routes for any logged-in user
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -54,6 +59,16 @@ function App() {
     <Router>
       <div className="bg-gray-100 min-h-screen">
         <Routes>
+          {/* Admin Routes */}
+          <Route
+            path="/admin/vendors"
+            element={
+              <RoleBasedRoute allowedRoles={["admin"]}>
+                <AdminVendorListPage />
+              </RoleBasedRoute>
+            }
+          />
+
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -80,6 +95,22 @@ function App() {
             element={
               <PrivateRoute>
                 <MySubscriptionsPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <PrivateRoute>
+                <MyOrdersPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/pay/:orderId"
+            element={
+              <PrivateRoute>
+                <PaymentPage />
               </PrivateRoute>
             }
           />
