@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 
-function Sidebar() {
+function Sidebar() {  
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
   const [isOpen, setIsOpen] = useState(true);
@@ -45,7 +45,7 @@ function Sidebar() {
     ],
     client: [
       { path: "/dashboard", name: "Dashboard", icon: <FaTachometerAlt /> },
-      { path: "/plans", name: "My Plans", icon: <FaClipboardList /> },
+      { path: "/plans", name: "My Pla", icon: <FaClipboardList /> },
       { path: "/subscriptions", name: "Subscriptions", icon: <FaBoxOpen /> },
       { path: "/orders", name: "My Orders", icon: <FaClipboardList /> },
     ],
@@ -112,7 +112,7 @@ function Sidebar() {
 
         {/* Menu Links */}
         <nav className="mt-4 space-y-1">
-          {links.map((link) => (
+          {links.map((link) => (  
             <NavLink
               key={link.name}
               to={link.path}

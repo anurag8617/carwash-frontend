@@ -71,7 +71,7 @@ function AdminVendorListPage() {
                   </button>
                 </td>
               </tr>
-            ))} 
+            ))}
           </tbody>
         </table>
       </div>
