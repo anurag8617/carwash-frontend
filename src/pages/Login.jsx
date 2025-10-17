@@ -37,6 +37,8 @@ function Login() {
 
       if (user.role === "vendor") {
         navigate("/vendor/dashboard");
+      } else if (user.role === "staff") {
+        navigate("/staff/dashboard");
       } else {
         navigate("/dashboard");
       }
