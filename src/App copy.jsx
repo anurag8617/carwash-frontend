@@ -262,10 +262,6 @@ import ProfilePage from "./pages/client/ProfilePage";
 import StaffDashboard from "./pages/staff/StaffDashboard";
 import StaffTasksPage from "./pages/staff/StaffTasksPage";
 import StaffProfilePage from "./pages/staff/StaffProfilePage";
-import AdminStaffListPage from "./pages/admin/AdminStaffListPage";
-import VendorFormPage from "./pages/admin/VendorFormPage";
-import AdminStaffProfilePage from "./pages/admin/AdminStaffProfilePage";
-import AdminVendorProfilePage from "./pages/admin/AdminVendorProfilePage";
 
 // NEW: A simple layout for the client-side interface without a sidebar.
 const ClientLayout = ({ children }) => {
@@ -400,46 +396,6 @@ function App() {
             element={
               <RoleBasedRoute allowedRoles={["admin"]}>
                 <AdminVendorListPage />
-              </RoleBasedRoute>
-            }
-          />
-          <Route
-            path="/admin/staff"
-            element={
-              <RoleBasedRoute allowedRoles={["admin"]}>
-                <AdminStaffListPage />
-              </RoleBasedRoute>
-            }
-          />
-          <Route
-            path="/admin/vendors/new"
-            element={
-              <RoleBasedRoute allowedRoles={["admin"]}>
-                <VendorFormPage />
-              </RoleBasedRoute>
-            }
-          />
-          <Route
-            path="/admin/staff/new"
-            element={
-              <RoleBasedRoute allowedRoles={["admin"]}>
-                <StaffFormPage />
-              </RoleBasedRoute>
-            }
-          />
-          <Route
-            path="/admin/staff/view/:id"
-            element={
-              <RoleBasedRoute allowedRoles={["admin"]}>
-                <AdminStaffProfilePage />
-              </RoleBasedRoute>
-            }
-          />
-          <Route
-            path="/admin/vendor/view/:id"
-            element={
-              <RoleBasedRoute allowedRoles={["admin"]}>
-                <AdminVendorProfilePage />
               </RoleBasedRoute>
             }
           />

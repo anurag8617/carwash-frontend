@@ -184,12 +184,12 @@ function Sidebar() {
   const navLinks = {
     admin: [
       {
-        path: "/admin/dashboard",
+        path: "/dashboard",
         name: "Dashboard",
         icon: <FaTachometerAlt />,
       },
       { path: "/admin/vendors", name: "Vendors", icon: <FaStore /> },
-      { path: "/admin/users", name: "Users", icon: <FaUsers /> },
+      { path: "/admin/staff", name: "Staff", icon: <FaUsers /> },
     ],
     vendor: [
       {
@@ -307,4 +307,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-  
